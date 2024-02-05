@@ -1,0 +1,317 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+}
+.container{
+    display: grid;
+    grid-template-columns: 250px 1fr 300px;
+    height: 100%;
+    overflow: hidden;
+}
+/* -----------menu design-------------------------- */
+#menu{
+    background-color: rgb(234, 245, 245);
+}
+.brand-logo{
+    padding: 0 30px;
+    /* border: 1px solid black; */
+}
+.brand-logo img{
+    height: 80px;
+    margin-top: 20px;
+
+}
+.menu-item a{
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px 30px;
+    margin: 12px 0;
+    font-weight: 300;
+    color: darkslategray;
+}
+.menu-item a:hover{
+    background-color: pink;
+    color: crimson;
+}
+#food-container{
+    /* background-color: rgb(248, 248, 248); */
+    overflow: scroll;
+    overflow-x: hidden;
+    box-sizing: content-box;
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    position: sticky;
+    top: 0;
+    background-color: whitesmoke;
+    z-index: 1;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+.your-address{
+    border: 1px solid indianred;
+    color: indianred;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 120px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    margin-left: 30px;
+}
+.add-box i{
+    font-size: 15px;
+}
+.util i,.user i{
+    font-size: 15px;
+    margin: 0 16px;
+    padding: 8px 16px;
+    border: 1px solid crimson;
+    cursor: pointer;
+    border-radius: 20px;
+    color: crimson;
+}
+.util i:active, .user i:active{
+    background-color: crimson;
+    color: white;
+}
+.food-itemsList{
+    /* display: none; */
+}
+#briyani,#chaap,#panner,#paratha,#roti,#sabji{
+    margin-top: 40px;
+}
+
+#panner #item-card,#paratha #item-card{
+    background-color: rgb(225, 233, 207);
+}
+#roti #item-card, #sabji #item-card{
+    background-color: rgb(241, 219, 238);
+}
+#category-name, .item-menu{
+    margin: 10px;
+    font-size: 35px;
+    color: darkmagenta;
+}
+#item-card{
+    width: 180px;
+    height: 220px;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: rgb(243, 243, 232);
+    cursor: pointer;
+    transition: 0.5s all ease-in-out;
+}
+#card-top{
+display: flex;
+margin: 2px 0;
+justify-content: space-between;
+}
+#rating{
+    padding: 7px;
+    color: goldenrod;
+    background-color: black;
+    font-size: 14px;
+    border-radius: 14px;
+    
+}
+.fa-heart-o{
+    padding: 6px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.toggle-heart{
+    background-color: orangered;
+    color: white;
+}
+#item-card img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+    margin-bottom: 15px;
+    transition: 0.5s all ease-in-out;
+}
+#item-card:hover img{
+    transform: scale(1.2);
+}
+#item-price{
+    margin: 0;
+    color: rgb(2,27,27);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+#item-name{
+    margin: 5px 0;
+    font-weight: 600;
+    color: darkslategrey;
+    font-size: 18px;
+}
+#cart{
+    /* background-color: darkgray; */
+    padding-right: 30px;
+    overflow-y: scroll;
+}
+.taste-header{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    position: sticky;
+    top: 0;
+    /* background-color: whitesmoke; */
+
+}
+.item-menu{
+ margin: 0;
+ font-size: 25px;
+ margin-top: 40px;
+ color: indianred;
+ /* background-color: whitesmoke; */
+}
+.border{
+    width: 80px;
+    height: 4px;
+    margin: 3px 0;
+    margin-bottom: 30px;
+    border-radius: 2px;
+    background-color: coral;
+}
+.list-card{
+
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+.list-card:hover{
+    background-color: pink;
+}
+.list-card img{
+    width: 50px;
+    height: 35px;
+    border-radius: 50%;
+    padding-left: 5px;
+}
+.list-card:hover img{
+    transition: 0.5s all ease-in-out;
+    transform: scale(1.2);
+}
+.list-name{
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: brown;
+}
+#category-list{
+    /* display: none; */
+  margin-left: 50px;
+}
+.cart-toggle{
+    background-color: white;
+    margin: 40px 40px;
+    margin-right: 50px;
+    padding: 20px 30px;
+    padding-bottom: 30px;
+    position: relative;
+    display: none;
+}
+#cart-title{
+    font-size: 35px;
+    margin: 0;
+    color: indianred;
+
+}
+#cart-page table{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+#cart-page table thead td{
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+#m-total-amount{
+    display: none;
+}
+#table-body tr td img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+#cart-page table thead td{
+    padding: 10px 0;
+    font-size: 20px ;
+
+}
+#cart-page table tbody button{
+    outline: none;
+    border: none;
+    font-size: 20px;
+    background: none;
+    background-color: lightcoral;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 5px ;
+    padding: 5px 8px;
+}
+#checkout{
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 5px;
+    /* background-color: rgb(228, 225, 220); */
+    padding: 10px 20px;
+}
+#checkout p{
+    margin: 15px 0;
+    /* float: right; */
+}
+#total-price,#total-item{
+    font-size: 20px;
+    color: indianred;
+}
+.cart-btn{
+    outline: none;
+    border: none;
+    background-color: crimson;
+    color: rgb(249, 245, 245);
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    text-transform: uppercase;
+    bottom: 30px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+.cart-btn:active{
+    color: crimson;
+    background: none;
+    border: 1px solid crimson;
+}
+#delievery{
+    font-size: 20px;
+    color: limegreen;
+}
